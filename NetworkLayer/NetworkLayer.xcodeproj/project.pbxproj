@@ -20,6 +20,7 @@
 		E5844BA92567B36B005272A5 /* OFoodCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5844BA82567B36B005272A5 /* OFoodCategory.swift */; };
 		E5844BCA2567E40C005272A5 /* FoodRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5844BC92567E40C005272A5 /* FoodRepositoryImpl.swift */; };
 		E5844BD22567E495005272A5 /* FoodService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5844BD12567E495005272A5 /* FoodService.swift */; };
+		E5844BDF2567F26B005272A5 /* NetworkModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5844BDE2567F26B005272A5 /* NetworkModule.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		E5844BA82567B36B005272A5 /* OFoodCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OFoodCategory.swift; sourceTree = "<group>"; };
 		E5844BC92567E40C005272A5 /* FoodRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRepositoryImpl.swift; sourceTree = "<group>"; };
 		E5844BD12567E495005272A5 /* FoodService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodService.swift; sourceTree = "<group>"; };
+		E5844BDE2567F26B005272A5 /* NetworkModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModule.swift; sourceTree = "<group>"; };
 		F9CD74168EE7E151D4A475D2 /* Pods_NetworkLayerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetworkLayerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -125,6 +127,7 @@
 		E5844B1625679D22005272A5 /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
+				E5844BDC2567F254005272A5 /* Module */,
 				E5844BD02567E47B005272A5 /* Client */,
 				E5844BC82567E3FE005272A5 /* Repositories */,
 				E5844B782567ABC1005272A5 /* Models */,
@@ -178,6 +181,14 @@
 				E5844BD12567E495005272A5 /* FoodService.swift */,
 			);
 			path = Client;
+			sourceTree = "<group>";
+		};
+		E5844BDC2567F254005272A5 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				E5844BDE2567F26B005272A5 /* NetworkModule.swift */,
+			);
+			path = Module;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,6 +353,7 @@
 			files = (
 				E5844BA92567B36B005272A5 /* OFoodCategory.swift in Sources */,
 				E5844BCA2567E40C005272A5 /* FoodRepositoryImpl.swift in Sources */,
+				E5844BDF2567F26B005272A5 /* NetworkModule.swift in Sources */,
 				E5844BD22567E495005272A5 /* FoodService.swift in Sources */,
 				E5844B7B2567ABE0005272A5 /* BaseResponse.swift in Sources */,
 				E5844BA62567AE11005272A5 /* OMenuItem.swift in Sources */,

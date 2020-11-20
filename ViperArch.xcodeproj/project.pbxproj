@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,9 +11,6 @@
 		98ABB93C56E0B067222933DC /* Pods_ViperArch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 406B510E264A05BBD4A58E7D /* Pods_ViperArch.framework */; };
 		D9FBB7613383C8E34E588571 /* Pods_ViperArch_ViperArchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D9F5EFDEF718800BA8CCC0F /* Pods_ViperArch_ViperArchUITests.framework */; };
 		E5844AA6256799F7005272A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5844AA5256799F7005272A5 /* AppDelegate.swift */; };
-		E5844AA8256799F7005272A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5844AA7256799F7005272A5 /* SceneDelegate.swift */; };
-		E5844AAA256799F7005272A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5844AA9256799F7005272A5 /* ViewController.swift */; };
-		E5844AAD256799F7005272A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5844AAB256799F7005272A5 /* Main.storyboard */; };
 		E5844AAF256799F7005272A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5844AAE256799F7005272A5 /* Assets.xcassets */; };
 		E5844AB2256799F7005272A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5844AB0256799F7005272A5 /* LaunchScreen.storyboard */; };
 		E5844ABD256799F8005272A5 /* ViperArchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5844ABC256799F8005272A5 /* ViperArchTests.swift */; };
@@ -23,6 +20,11 @@
 		E5844B332567A0FC005272A5 /* DomainLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E5844B302567A0FC005272A5 /* DomainLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E5844B342567A0FC005272A5 /* NetworkLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5844B312567A0FC005272A5 /* NetworkLayer.framework */; };
 		E5844B352567A0FC005272A5 /* NetworkLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E5844B312567A0FC005272A5 /* NetworkLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E5844BE92567F3BC005272A5 /* ApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5844BE82567F3BC005272A5 /* ApplicationService.swift */; };
+		E5844BEF2567F3CF005272A5 /* PluggableApplicationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5844BEE2567F3CF005272A5 /* PluggableApplicationDelegate.swift */; };
+		E5844BF42567F415005272A5 /* DependenciesApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5844BF32567F415005272A5 /* DependenciesApplicationService.swift */; };
+		E5844BFA2567F43D005272A5 /* UIApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5844BF92567F43D005272A5 /* UIApplicationService.swift */; };
+		E5844BFF2567F4B0005272A5 /* UIModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5844BFE2567F4B0005272A5 /* UIModule.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,9 +70,6 @@
 		D52D66D2CECFAEC3AA16C8F8 /* Pods-ViperArch-ViperArchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViperArch-ViperArchUITests.release.xcconfig"; path = "Target Support Files/Pods-ViperArch-ViperArchUITests/Pods-ViperArch-ViperArchUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E5844AA2256799F7005272A5 /* ViperArch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViperArch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5844AA5256799F7005272A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E5844AA7256799F7005272A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E5844AA9256799F7005272A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E5844AAC256799F7005272A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E5844AAE256799F7005272A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5844AB1256799F7005272A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E5844AB3256799F7005272A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -83,6 +82,11 @@
 		E5844AD925679C70005272A5 /* StoryboardInitializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInitializable.swift; sourceTree = "<group>"; };
 		E5844B302567A0FC005272A5 /* DomainLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DomainLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5844B312567A0FC005272A5 /* NetworkLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NetworkLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5844BE82567F3BC005272A5 /* ApplicationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationService.swift; sourceTree = "<group>"; };
+		E5844BEE2567F3CF005272A5 /* PluggableApplicationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PluggableApplicationDelegate.swift; sourceTree = "<group>"; };
+		E5844BF32567F415005272A5 /* DependenciesApplicationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependenciesApplicationService.swift; sourceTree = "<group>"; };
+		E5844BF92567F43D005272A5 /* UIApplicationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationService.swift; sourceTree = "<group>"; };
+		E5844BFE2567F4B0005272A5 /* UIModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIModule.swift; sourceTree = "<group>"; };
 		F9D286D1AAEC40C44EC73745 /* Pods-ViperArchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViperArchTests.release.xcconfig"; path = "Target Support Files/Pods-ViperArchTests/Pods-ViperArchTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -166,11 +170,11 @@
 		E5844AA4256799F7005272A5 /* ViperArch */ = {
 			isa = PBXGroup;
 			children = (
+				E5844BFD2567F49F005272A5 /* Module */,
+				E5844BF22567F40A005272A5 /* Services */,
+				E5844BE72567F3AB005272A5 /* Application */,
 				E5844AD825679C63005272A5 /* Base */,
 				E5844AA5256799F7005272A5 /* AppDelegate.swift */,
-				E5844AA7256799F7005272A5 /* SceneDelegate.swift */,
-				E5844AA9256799F7005272A5 /* ViewController.swift */,
-				E5844AAB256799F7005272A5 /* Main.storyboard */,
 				E5844AAE256799F7005272A5 /* Assets.xcassets */,
 				E5844AB0256799F7005272A5 /* LaunchScreen.storyboard */,
 				E5844AB3256799F7005272A5 /* Info.plist */,
@@ -202,6 +206,32 @@
 				E5844AD925679C70005272A5 /* StoryboardInitializable.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		E5844BE72567F3AB005272A5 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				E5844BE82567F3BC005272A5 /* ApplicationService.swift */,
+				E5844BEE2567F3CF005272A5 /* PluggableApplicationDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		E5844BF22567F40A005272A5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E5844BF32567F415005272A5 /* DependenciesApplicationService.swift */,
+				E5844BF92567F43D005272A5 /* UIApplicationService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E5844BFD2567F49F005272A5 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				E5844BFE2567F4B0005272A5 /* UIModule.swift */,
+			);
+			path = Module;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,7 +345,6 @@
 			files = (
 				E5844AB2256799F7005272A5 /* LaunchScreen.storyboard in Resources */,
 				E5844AAF256799F7005272A5 /* Assets.xcassets in Resources */,
-				E5844AAD256799F7005272A5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,10 +472,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5844AAA256799F7005272A5 /* ViewController.swift in Sources */,
+				E5844BFA2567F43D005272A5 /* UIApplicationService.swift in Sources */,
 				E5844AA6256799F7005272A5 /* AppDelegate.swift in Sources */,
+				E5844BF42567F415005272A5 /* DependenciesApplicationService.swift in Sources */,
+				E5844BE92567F3BC005272A5 /* ApplicationService.swift in Sources */,
 				E5844ADA25679C70005272A5 /* StoryboardInitializable.swift in Sources */,
-				E5844AA8256799F7005272A5 /* SceneDelegate.swift in Sources */,
+				E5844BFF2567F4B0005272A5 /* UIModule.swift in Sources */,
+				E5844BEF2567F3CF005272A5 /* PluggableApplicationDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,14 +514,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E5844AAB256799F7005272A5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E5844AAC256799F7005272A5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E5844AB0256799F7005272A5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

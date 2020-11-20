@@ -16,6 +16,7 @@
 		E5844B5D2567AA4F005272A5 /* FoodCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5844B5C2567AA4F005272A5 /* FoodCategory.swift */; };
 		E5844B612567AAA4005272A5 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5844B602567AAA4005272A5 /* MenuItem.swift */; };
 		E5844BC32567E3AF005272A5 /* FoodRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5844BC22567E3AF005272A5 /* FoodRepository.swift */; };
+		E5844BD72567F233005272A5 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5844BD62567F233005272A5 /* Dependencies.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		E5844B5C2567AA4F005272A5 /* FoodCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategory.swift; sourceTree = "<group>"; };
 		E5844B602567AAA4005272A5 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		E5844BC22567E3AF005272A5 /* FoodRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRepository.swift; sourceTree = "<group>"; };
+		E5844BD62567F233005272A5 /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
 		FA331EC21F7D476D8D1CEC98 /* Pods_DomainLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DomainLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -112,6 +114,7 @@
 		E5844AF025679D02005272A5 /* DomainLayer */ = {
 			isa = PBXGroup;
 			children = (
+				E5844BD52567F225005272A5 /* DI */,
 				E5844BC12567E3A2005272A5 /* Repositories */,
 				E5844B572567AA21005272A5 /* Entity */,
 				E5844AF125679D02005272A5 /* DomainLayer.h */,
@@ -145,6 +148,14 @@
 				E5844BC22567E3AF005272A5 /* FoodRepository.swift */,
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		E5844BD52567F225005272A5 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				E5844BD62567F233005272A5 /* Dependencies.swift */,
+			);
+			path = DI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,6 +319,7 @@
 				E5844B612567AAA4005272A5 /* MenuItem.swift in Sources */,
 				E5844B592567AA31005272A5 /* BaseEntity.swift in Sources */,
 				E5844B5D2567AA4F005272A5 /* FoodCategory.swift in Sources */,
+				E5844BD72567F233005272A5 /* Dependencies.swift in Sources */,
 				E5844BC32567E3AF005272A5 /* FoodRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
