@@ -5,9 +5,10 @@
 //  Created by Mehdok on 11/20/20.
 //
 
+import DomainLayer
 import ObjectMapper
 
-struct OCategory: BaseResponse {
+struct OFoodCategory: BaseResponse {
     var id, name, position: String?
     var menuItems: [OMenuItem]?
 
@@ -18,5 +19,11 @@ struct OCategory: BaseResponse {
         name <- map["name"]
         position <- map["position"]
         menuItems <- map["menu-items"]
+    }
+}
+
+extension OFoodCategory {
+    var entity: FoodCategory {
+        FoodCategory(id: id, name: name, position: position, menuItems: menuItems?.map { $0.entity })
     }
 }

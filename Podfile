@@ -31,6 +31,11 @@ def object_mapper
   pod 'ObjectMapper', '~> 4.2.0'
 end
 
+##
+def moya
+  pod 'Moya/RxSwift', '~> 14.0'
+end
+
 ####
 target 'DomainLayer' do
     use_frameworks!
@@ -54,6 +59,7 @@ target 'NetworkLayer' do
     
     rx_swift
     object_mapper
+    moya
     
     target 'NetworkLayerTests' do
       inherit! :search_paths
@@ -73,6 +79,7 @@ target 'ViperArch' do
   rx_gesture
   king_fisher
   object_mapper
+  moya
 
   target 'ViperArchTests' do
     inherit! :search_paths
