@@ -1,0 +1,122 @@
+ [
+    {
+      "id": "26576",
+      "name": "Appeteasers",
+      "position": "0",
+      "menu-items": [
+        {
+          "id": "94298",
+          "name": "3 Chicken Wings",
+          "position": 1,
+          "description": "Tender, Spicy and Juicy. Original or Peri-Crusted",
+          "images": []
+        },
+        {
+          "id": "94301",
+          "name": "Chicken Livers and Portuguese Roll",
+          "position": 2,
+          "description": "Chicken Livers Topped with PERi-PERi Sauce, Served with A Roll To Soak Up The Sauce",
+          "images": []
+        },
+        {
+          "id": "94304",
+          "name": "Spicy Mixed Olives (V)",
+          "position": 3,
+          "description": "Co-Starring Garlic, Pepper and Chili",
+          "images": []
+        },
+        {
+          "id": "94307",
+          "name": "Hummus with PERI-PERI Drizzle (V)",
+          "position": 4,
+          "description": "Pour Smoky PERi-PERi Oil Over Creamy Hummus and Dig in with Strips Of Warm Pita",
+          "images": []
+        },
+        {
+          "id": "94310",
+          "name": "Red Pepper Dip (V)",
+          "position": 5,
+          "description": "Dive Into Temping Roasted Red Pepper and Chili Spice Dip with Warm Pita Strips",
+          "images": []
+        },
+        {
+          "id": "94313",
+          "name": "Appeteaser Platter",
+          "position": 6,
+          "description": "Choose any Three Appeteasers",
+          "images": []
+        },
+        {
+          "id": "94316",
+          "name": "All Together Now (V)",
+          "position": 7,
+          "description": "Spicy Mixed Olives, Red Pepper Dip, Hummus with PERi-PERi Drizzle and Warm Pita Strips",
+          "images": []
+        }
+      ]
+    },
+    {
+      "id": "26585",
+      "name": "Salads",
+      "position": "0",
+      "menu-items": [
+        {
+          "id": "94340",
+          "name": "Portuguese Salad",
+          "position": 28,
+          "description": "Fresh Tomato, Nando&amp;#039;s Peri-Olives, Mixed Peppers, Cucumber and Onion on A Bed of Crisp Lettuce",
+          "images": []
+        },
+        {
+          "id": "94343",
+          "name": "Mediterranean Salad",
+          "position": 29,
+          "description": "Piccolo Tomato, Cucumber, Sweet Peppers and Mixed Leaves. Sprinkled with Olives and Feta Cheese",
+          "images": []
+        },
+        {
+          "id": "94346",
+          "name": "Caesar Salad (M)",
+          "position": 30,
+          "description": "Cos Lettuce Sprinkled with Parmesan Cheese, Caesar Dressing and Crunchy Croutons",
+          "images": []
+        }
+      ]
+    },
+    {
+      "id": "26597",
+      "name": "Burgers",
+      "position": "0",
+      "menu-items": [
+        {
+          "id": "94388",
+          "name": "Chicken Wrap (Y)",
+          "position": 32,
+          "description": "A Lightly Toasted Wrap, Generously Filled With Tender Chicken, Chili Jam, Green Leaf Lettuce and Tangy Yoghurt Sauce",
+          "images": []
+        },
+        {
+          "id": "94391",
+          "name": "Chicken Breast Burger (M)",
+          "position": 33,
+          "description": "Served on A Toasted Portuguese Roll with Fresh Rocket, Tomato, Pickled Red Onions and Perinaise",
+          "images": []
+        },
+        {
+          "id": "94394",
+          "name": "Chicken Caesar Wrap (M)",
+          "position": 34,
+          "description": "Served in A Toasted Wrap Full Of PERi-PERi Chicken, Crunchy Croutons, Parmesan Cheese and Sundried Tomatoes, All Smothered in Creamy Caesar Dressing",
+          "images": []
+        },
+        {
+          "id": "94397",
+          "name": "Chicken Pita (M)",
+          "position": 35,
+          "description": "Served in A Lightly Toasted Pita, Stuffed With Chicken Tenders, Crisp Veggie Salad and Creamy Whip",
+          "images": []
+        }
+      ]
+    }
+  ]
+
