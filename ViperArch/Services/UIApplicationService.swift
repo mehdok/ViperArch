@@ -12,6 +12,7 @@ class UIApplicationService: ApplicationService {
     var window: UIWindow?
     // TODO: dispose bag when app is terminated
     private let disposeBag = DisposeBag()
+    private var appRouter: AppRouter!
 
     init(window: UIWindow?) {
         self.window = window
@@ -26,6 +27,9 @@ class UIApplicationService: ApplicationService {
 extension UIApplicationService {
     func startFirstPage() {
         window = UIWindow(frame: UIScreen.main.bounds)
-        
+        appRouter = AppRouter(window: window!)
+        appRouter.start()
+            .subscribe()
+            .disposed(by: disposeBag)
     }
 }

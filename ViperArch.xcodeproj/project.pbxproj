@@ -25,6 +25,17 @@
 		E5844BF42567F415005272A5 /* DependenciesApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5844BF32567F415005272A5 /* DependenciesApplicationService.swift */; };
 		E5844BFA2567F43D005272A5 /* UIApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5844BF92567F43D005272A5 /* UIApplicationService.swift */; };
 		E5844BFF2567F4B0005272A5 /* UIModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5844BFE2567F4B0005272A5 /* UIModule.swift */; };
+		E5844C0A2567F669005272A5 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5844C092567F669005272A5 /* BaseRouter.swift */; };
+		E5844C0E2567F82A005272A5 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5844C0D2567F82A005272A5 /* BasePresenter.swift */; };
+		E5844C122567F86D005272A5 /* BaseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5844C112567F86D005272A5 /* BaseInteractor.swift */; };
+		E5844C162567F889005272A5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5844C152567F889005272A5 /* BaseViewController.swift */; };
+		E5844C1B2567F9AE005272A5 /* MainScreenPR.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5844C1A2567F9AE005272A5 /* MainScreenPR.swift */; };
+		E5844C212567F9CD005272A5 /* MainScreenRT.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5844C202567F9CD005272A5 /* MainScreenRT.swift */; };
+		E5844C252567F9D6005272A5 /* MainScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5844C242567F9D6005272A5 /* MainScreenVC.swift */; };
+		E5844C292567F9DF005272A5 /* MainScreenSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5844C282567F9DF005272A5 /* MainScreenSB.storyboard */; };
+		E5844C2D2567FB0B005272A5 /* MainScreenIN.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5844C2C2567FB0B005272A5 /* MainScreenIN.swift */; };
+		E5844C312567FD73005272A5 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5844C302567FD73005272A5 /* AppRouter.swift */; };
+		E5844C372567FDEE005272A5 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5844C362567FDEE005272A5 /* BaseNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +98,17 @@
 		E5844BF32567F415005272A5 /* DependenciesApplicationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependenciesApplicationService.swift; sourceTree = "<group>"; };
 		E5844BF92567F43D005272A5 /* UIApplicationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationService.swift; sourceTree = "<group>"; };
 		E5844BFE2567F4B0005272A5 /* UIModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIModule.swift; sourceTree = "<group>"; };
+		E5844C092567F669005272A5 /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
+		E5844C0D2567F82A005272A5 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		E5844C112567F86D005272A5 /* BaseInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInteractor.swift; sourceTree = "<group>"; };
+		E5844C152567F889005272A5 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		E5844C1A2567F9AE005272A5 /* MainScreenPR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenPR.swift; sourceTree = "<group>"; };
+		E5844C202567F9CD005272A5 /* MainScreenRT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenRT.swift; sourceTree = "<group>"; };
+		E5844C242567F9D6005272A5 /* MainScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenVC.swift; sourceTree = "<group>"; };
+		E5844C282567F9DF005272A5 /* MainScreenSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainScreenSB.storyboard; sourceTree = "<group>"; };
+		E5844C2C2567FB0B005272A5 /* MainScreenIN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenIN.swift; sourceTree = "<group>"; };
+		E5844C302567FD73005272A5 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		E5844C362567FDEE005272A5 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		F9D286D1AAEC40C44EC73745 /* Pods-ViperArchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViperArchTests.release.xcconfig"; path = "Target Support Files/Pods-ViperArchTests/Pods-ViperArchTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -170,11 +192,13 @@
 		E5844AA4256799F7005272A5 /* ViperArch */ = {
 			isa = PBXGroup;
 			children = (
+				E5844C192567F98D005272A5 /* Screens */,
 				E5844BFD2567F49F005272A5 /* Module */,
 				E5844BF22567F40A005272A5 /* Services */,
 				E5844BE72567F3AB005272A5 /* Application */,
 				E5844AD825679C63005272A5 /* Base */,
 				E5844AA5256799F7005272A5 /* AppDelegate.swift */,
+				E5844C302567FD73005272A5 /* AppRouter.swift */,
 				E5844AAE256799F7005272A5 /* Assets.xcassets */,
 				E5844AB0256799F7005272A5 /* LaunchScreen.storyboard */,
 				E5844AB3256799F7005272A5 /* Info.plist */,
@@ -204,6 +228,11 @@
 			isa = PBXGroup;
 			children = (
 				E5844AD925679C70005272A5 /* StoryboardInitializable.swift */,
+				E5844C092567F669005272A5 /* BaseRouter.swift */,
+				E5844C0D2567F82A005272A5 /* BasePresenter.swift */,
+				E5844C112567F86D005272A5 /* BaseInteractor.swift */,
+				E5844C152567F889005272A5 /* BaseViewController.swift */,
+				E5844C362567FDEE005272A5 /* BaseNavigationController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -232,6 +261,18 @@
 				E5844BFE2567F4B0005272A5 /* UIModule.swift */,
 			);
 			path = Module;
+			sourceTree = "<group>";
+		};
+		E5844C192567F98D005272A5 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				E5844C1A2567F9AE005272A5 /* MainScreenPR.swift */,
+				E5844C202567F9CD005272A5 /* MainScreenRT.swift */,
+				E5844C242567F9D6005272A5 /* MainScreenVC.swift */,
+				E5844C282567F9DF005272A5 /* MainScreenSB.storyboard */,
+				E5844C2C2567FB0B005272A5 /* MainScreenIN.swift */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,6 +386,7 @@
 			files = (
 				E5844AB2256799F7005272A5 /* LaunchScreen.storyboard in Resources */,
 				E5844AAF256799F7005272A5 /* Assets.xcassets in Resources */,
+				E5844C292567F9DF005272A5 /* MainScreenSB.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,12 +515,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5844BFA2567F43D005272A5 /* UIApplicationService.swift in Sources */,
+				E5844C122567F86D005272A5 /* BaseInteractor.swift in Sources */,
+				E5844C162567F889005272A5 /* BaseViewController.swift in Sources */,
+				E5844C212567F9CD005272A5 /* MainScreenRT.swift in Sources */,
+				E5844C0E2567F82A005272A5 /* BasePresenter.swift in Sources */,
+				E5844C1B2567F9AE005272A5 /* MainScreenPR.swift in Sources */,
 				E5844AA6256799F7005272A5 /* AppDelegate.swift in Sources */,
+				E5844C2D2567FB0B005272A5 /* MainScreenIN.swift in Sources */,
+				E5844C252567F9D6005272A5 /* MainScreenVC.swift in Sources */,
 				E5844BF42567F415005272A5 /* DependenciesApplicationService.swift in Sources */,
 				E5844BE92567F3BC005272A5 /* ApplicationService.swift in Sources */,
 				E5844ADA25679C70005272A5 /* StoryboardInitializable.swift in Sources */,
+				E5844C312567FD73005272A5 /* AppRouter.swift in Sources */,
 				E5844BFF2567F4B0005272A5 /* UIModule.swift in Sources */,
+				E5844C372567FDEE005272A5 /* BaseNavigationController.swift in Sources */,
 				E5844BEF2567F3CF005272A5 /* PluggableApplicationDelegate.swift in Sources */,
+				E5844C0A2567F669005272A5 /* BaseRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
