@@ -6,12 +6,15 @@
 //
 
 import DomainLayer
+import NetworkLayer
 
 protocol UIModuleType {
     func component() -> MainScreenPR
 }
 
 struct UIModule: UIModuleType {
+    @Inject private var networkModule: NetworkModule
+
     func component() -> MainScreenPR {
         MainScreenPR(interactor: component())
     }
@@ -19,6 +22,6 @@ struct UIModule: UIModuleType {
 
 extension UIModule {
     private func component() -> MainScreenIN {
-        MainScreenIN()
+        MainScreenIN(foodRepository: networkModule.component())
     }
 }

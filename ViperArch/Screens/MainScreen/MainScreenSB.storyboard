@@ -16,9 +16,22 @@
                     <view key="view" contentMode="scaleToFill" id="YrS-Ll-2iM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Itk-Gy-VaZ">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" systemColor="systemBlueColor"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="tTg-8D-AYI"/>
                         <color key="backgroundColor" systemColor="systemPinkColor"/>
+                        <constraints>
+                            <constraint firstItem="Itk-Gy-VaZ" firstAttribute="centerY" secondItem="YrS-Ll-2iM" secondAttribute="centerY" id="ORI-MH-UlN"/>
+                            <constraint firstItem="Itk-Gy-VaZ" firstAttribute="centerX" secondItem="YrS-Ll-2iM" secondAttribute="centerX" id="f06-ud-IS1"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loadIndicator" destination="Itk-Gy-VaZ" id="fY0-0p-qaA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EzK-4a-3oe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -26,6 +39,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

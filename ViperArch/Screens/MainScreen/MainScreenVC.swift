@@ -7,10 +7,15 @@
 
 import FloatingPanel
 import UIKit
+import RxSwift
+import RxCocoa
 
 class MainScreenVC: BaseViewController<MainScreenIN, MainScreenPR> {
     var fpc: FloatingPanelController!
     var detailLayer: DetailScreenVC!
+    
+    @IBOutlet weak var loadIndicator: UIActivityIndicatorView!
+    
 
     static func instance() -> MainScreenVC {
         MainScreenVC.initFromStoryboard(name: "MainScreenSB")
@@ -34,7 +39,14 @@ class MainScreenVC: BaseViewController<MainScreenIN, MainScreenPR> {
 //        fpc?.removePanelFromParent(animated: animated)
     }
 
-    override func bindViews() {}
+    override func bindViews() {
+        presenter.isLoading?.drive(rx_showLoading).disposed(by: bag)
+
+        presenter.hasSucced?.asObservable().subscribe{ categories in
+            print("categories_loaded:")
+        }
+        .disposed(by: bag)
+    }
 }
 
 extension MainScreenVC: FloatingPanelControllerDelegate {
@@ -58,5 +70,13 @@ extension MainScreenVC: FloatingPanelLayout {
             .half: FloatingPanelLayoutAnchor(fractionalInset: 0.3, edge: .bottom, referenceGuide: .safeArea),
             .tip: FloatingPanelLayoutAnchor(fractionalInset: 0.3, edge: .bottom, referenceGuide: .safeArea),
         ]
+    }
+}
+
+extension MainScreenVC {
+    var rx_showLoading: AnyObserver<Bool> {
+        return Binder(self, binding: { [weak self] _, show in
+            self?.loadIndicator.isHidden = !show
+        }).asObserver()
     }
 }
