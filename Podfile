@@ -36,6 +36,11 @@ def moya
   pod 'Moya/RxSwift', '~> 14.0'
 end
 
+##
+def floating_panel
+  pod 'FloatingPanel'
+end
+
 ####
 target 'DomainLayer' do
     use_frameworks!
@@ -80,6 +85,7 @@ target 'ViperArch' do
   king_fisher
   object_mapper
   moya
+  floating_panel
 
   target 'ViperArchTests' do
     inherit! :search_paths
