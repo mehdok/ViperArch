@@ -16,5 +16,6 @@ class DependenciesApplicationService: ApplicationService {
 
     func initialize() {
         dependencies.build()
+        print("dependencies.build")
     }
 }

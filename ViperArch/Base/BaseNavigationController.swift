@@ -10,7 +10,7 @@ import UIKit
 open class BaseNavigationController: UINavigationController {
     public var style: UIStatusBarStyle = .lightContent
 
-    open override var preferredStatusBarStyle: UIStatusBarStyle {
+    override open var preferredStatusBarStyle: UIStatusBarStyle {
         return style
     }
 }

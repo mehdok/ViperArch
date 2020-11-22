@@ -18,7 +18,7 @@ open class PluggableApplicationDelegate: UIResponder, UIApplicationDelegate {
         return [ /* Populated from sub-class */ ]
     }
 
-    public override init() {
+    override public init() {
         super.init()
 
         lazyServices.forEach {
@@ -109,7 +109,8 @@ public extension PluggableApplicationDelegate {
 
 public extension PluggableApplicationDelegate {
     func application(_ application: UIApplication,
-                     didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+                     didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data)
+    {
         lazyServices.forEach {
             $0
                 .application(application,
@@ -118,7 +119,8 @@ public extension PluggableApplicationDelegate {
     }
 
     func application(_ application: UIApplication,
-                     didFailToRegisterForRemoteNotificationsWithError error: Error) {
+                     didFailToRegisterForRemoteNotificationsWithError error: Error)
+    {
         lazyServices.forEach {
             $0
                 .application(application,

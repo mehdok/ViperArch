@@ -14,7 +14,7 @@ struct OMenuItem: BaseResponse {
     var description: String?
     var images: [String]?
 
-    init?(map: Map) {}
+    init?(map _: Map) {}
 
     mutating func mapping(map: Map) {
         id <- map["id"]

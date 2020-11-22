@@ -12,7 +12,7 @@ struct OFoodCategory: BaseResponse {
     var id, name, position: String?
     var menuItems: [OMenuItem]?
 
-    init?(map: Map) {}
+    init?(map _: Map) {}
 
     mutating func mapping(map: Map) {
         id <- map["id"]

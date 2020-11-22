@@ -15,7 +15,7 @@ open class BasePresenter<Interactor: BaseInteractor> {
 
     public init(interactor: Interactor) {
         self.interactor = interactor
-        
+
         let _poppedFromNavigationStack = PublishSubject<Void>()
         poppedFromNavigationStack = _poppedFromNavigationStack.asObserver()
         didPoppedFromNavigationStack = _poppedFromNavigationStack.asObservable()

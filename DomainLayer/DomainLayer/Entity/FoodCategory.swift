@@ -12,7 +12,7 @@ public struct FoodCategory: BaseEntity {
         self.position = position
         self.menuItems = menuItems
     }
-    
+
     public let id, name, position: String?
     public let menuItems: [MenuItem]?
 

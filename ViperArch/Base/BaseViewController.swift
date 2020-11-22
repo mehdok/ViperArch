@@ -5,13 +5,13 @@
 //  Created by Mehdok on 11/20/20.
 //
 
-import UIKit
 import RxSwift
+import UIKit
 
 open class BaseViewController<Interactor: BaseInteractor, Presenter: BasePresenter<Interactor>>: UIViewController, StoryboardInitializable {
     public var presenter: Presenter!
     public var bag = DisposeBag()
-    
+
     override open func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,7 +27,7 @@ open class BaseViewController<Interactor: BaseInteractor, Presenter: BasePresent
             presenter.poppedFromNavigationStack.onNext(())
         }
     }
-    
+
     /**
      Bind any view to model view observer like:
      ````
@@ -37,7 +37,7 @@ open class BaseViewController<Interactor: BaseInteractor, Presenter: BasePresent
     open func bindViews() {
         preconditionFailure("This method must be overrited by child class")
     }
-    
+
     override open var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }

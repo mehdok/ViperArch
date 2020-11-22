@@ -5,7 +5,4 @@
 //  Created by Mehdok on 11/20/20.
 //
 
-
-class MainScreenPR: BasePresenter<MainScreenIN> {
-
-}
+class MainScreenPR: BasePresenter<MainScreenIN> {}

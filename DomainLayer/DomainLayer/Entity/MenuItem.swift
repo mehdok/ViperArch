@@ -13,11 +13,9 @@ public struct MenuItem: BaseEntity {
         self.description = description
         self.images = images
     }
-    
+
     public let id, name: String?
     public let position: Int?
     public let description: String?
     public let images: [String]?
-    
-    
 }

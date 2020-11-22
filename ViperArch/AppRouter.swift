@@ -24,9 +24,10 @@ class AppRouter: BaseRouter<Void> {
     }
 }
 
-extension AppRouter {
-    fileprivate func showMainScreen(on rootNavigation: BaseNavigationController)
-        -> Observable<Void> {
+private extension AppRouter {
+    func showMainScreen(on rootNavigation: BaseNavigationController)
+        -> Observable<Void>
+    {
         rootNavigation.style = .default
         let mainRT = MainScreenRT(navigationController: rootNavigation)
         return route(to: mainRT)

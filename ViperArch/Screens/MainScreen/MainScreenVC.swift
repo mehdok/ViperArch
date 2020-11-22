@@ -18,7 +18,7 @@ class MainScreenVC: BaseViewController<MainScreenIN, MainScreenPR> {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+
         fpc = FloatingPanelController()
         fpc.contentMode = .fitToBounds
         detailLayer = DetailScreenVC.instance()
@@ -30,7 +30,7 @@ class MainScreenVC: BaseViewController<MainScreenIN, MainScreenPR> {
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
+
 //        fpc?.removePanelFromParent(animated: animated)
     }
 
@@ -38,7 +38,7 @@ class MainScreenVC: BaseViewController<MainScreenIN, MainScreenPR> {
 }
 
 extension MainScreenVC: FloatingPanelControllerDelegate {
-    func floatingPanel(_ fpc: FloatingPanelController, layoutFor size: CGSize) -> FloatingPanelLayout {
+    func floatingPanel(_: FloatingPanelController, layoutFor _: CGSize) -> FloatingPanelLayout {
         self
     }
 }
@@ -52,9 +52,11 @@ extension MainScreenVC: FloatingPanelLayout {
         .bottom
     }
 
-    var anchors: [FloatingPanelState : FloatingPanelLayoutAnchoring] {
-        [.full: FloatingPanelLayoutAnchor(absoluteInset: 0, edge: .top, referenceGuide: .safeArea),
-         .half: FloatingPanelLayoutAnchor(fractionalInset: 0.3, edge: .bottom, referenceGuide: .safeArea),
-         .tip: FloatingPanelLayoutAnchor(fractionalInset: 0.3, edge: .bottom, referenceGuide: .safeArea)]
+    var anchors: [FloatingPanelState: FloatingPanelLayoutAnchoring] {
+        [
+            .full: FloatingPanelLayoutAnchor(absoluteInset: 0, edge: .top, referenceGuide: .safeArea),
+            .half: FloatingPanelLayoutAnchor(fractionalInset: 0.3, edge: .bottom, referenceGuide: .safeArea),
+            .tip: FloatingPanelLayoutAnchor(fractionalInset: 0.3, edge: .bottom, referenceGuide: .safeArea),
+        ]
     }
 }

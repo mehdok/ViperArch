@@ -79,7 +79,7 @@ public extension Dependencies {
     }
 
     /// DSL for declaring modules within the container dependency initializer.
-    @_functionBuilder struct ModuleBuilder {
+    @_functionBuilder enum ModuleBuilder {
         public static func buildBlock(_ modules: Module...)
             -> [Module] { modules }
 

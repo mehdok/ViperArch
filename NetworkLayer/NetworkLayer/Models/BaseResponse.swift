@@ -10,8 +10,7 @@ import RxSwift
 
 protocol BaseResponse: Mappable {}
 
-extension BaseResponse {
-}
+extension BaseResponse {}
 
 public extension ObservableType {
     func mapObject<T: Mappable>(type _: T.Type) -> Observable<T> {

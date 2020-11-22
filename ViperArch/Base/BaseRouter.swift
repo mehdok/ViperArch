@@ -30,7 +30,7 @@ open class BaseRouter<ResultType> {
     private func store<T>(router: BaseRouter<T>) {
         childRouters[router.identifier] = router
     }
-    
+
     /// Release router from the `childRouters` dictionary.
     ///
     /// - Parameter router: Router to release.
@@ -41,7 +41,7 @@ open class BaseRouter<ResultType> {
 
     /// Just a placeholder
     public init() {}
-    
+
     public func disposeOnPopByGusture(_ observable: Observable<Void?>) {
         observable.subscribe { [weak self] _ in
             print("disposeOnPopByGusture: \(String(describing: self))")
@@ -53,7 +53,7 @@ open class BaseRouter<ResultType> {
     deinit {
         bag = DisposeBag()
     }
-    
+
     /// 1. Stores router in a dictionary of child routers.
     /// 2. Calls method `start()` on that router.
     /// 3. On the `onNext:` of returning observable of method `start()` removes router from the dictionary.
@@ -61,7 +61,8 @@ open class BaseRouter<ResultType> {
     /// - Parameter router: Router to start.
     /// - Returns: Result of `start()` method.
     open func route<T>(to router: BaseRouter<T>)
-        -> Observable<T> {
+        -> Observable<T>
+    {
         store(router: router)
         return router.start()
             .do(onNext: { [weak self] _ in

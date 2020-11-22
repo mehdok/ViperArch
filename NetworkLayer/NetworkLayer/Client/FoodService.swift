@@ -15,32 +15,32 @@ extension FoodService: TargetType {
     public var baseURL: URL {
         URL(string: "https://nop.com")!
     }
-    
+
     public var path: String {
         switch self {
         case .foodCategory:
             return "/food_category"
         }
     }
-    
+
     public var sampleData: Data {
         switch self {
         case .foodCategory:
             return getMockJson("food_sample")
         }
     }
-    
+
     public var headers: [String: String]? {
         ["Content-type": "application/json"]
     }
-    
+
     var method: Moya.Method {
         switch self {
         case .foodCategory:
             return .get
         }
     }
-    
+
     var task: Task {
         switch self {
         case .foodCategory:
@@ -57,7 +57,7 @@ extension FoodService {
         else {
             return Data()
         }
-        
+
         return data
     }
 }

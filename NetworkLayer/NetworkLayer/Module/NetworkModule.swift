@@ -21,7 +21,7 @@ public struct NetworkModule: NetworkModuleType {
 }
 
 extension NetworkModule {
-    private func component()-> MoyaProvider<FoodService> {
+    private func component() -> MoyaProvider<FoodService> {
         MoyaProvider<FoodService>()
     }
 }
