@@ -6,16 +6,15 @@
 //
 
 import FloatingPanel
-import UIKit
-import RxSwift
 import RxCocoa
+import RxSwift
+import UIKit
 
 class MainScreenVC: BaseViewController<MainScreenIN, MainScreenPR> {
     var fpc: FloatingPanelController!
     var detailLayer: DetailScreenVC!
-    
-    @IBOutlet weak var loadIndicator: UIActivityIndicatorView!
-    
+
+    @IBOutlet var loadIndicator: UIActivityIndicatorView!
 
     static func instance() -> MainScreenVC {
         MainScreenVC.initFromStoryboard(name: "MainScreenSB")
@@ -24,13 +23,7 @@ class MainScreenVC: BaseViewController<MainScreenIN, MainScreenPR> {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        fpc = FloatingPanelController()
-        fpc.contentMode = .fitToBounds
-        detailLayer = DetailScreenVC.instance()
-        fpc.set(contentViewController: detailLayer)
-        fpc.delegate = self
-        fpc.layout = self
-        fpc.addPanel(toParent: self)
+        setupDetailLayer()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -41,16 +34,25 @@ class MainScreenVC: BaseViewController<MainScreenIN, MainScreenPR> {
 
     override func bindViews() {
         presenter.isLoading?.drive(rx_showLoading).disposed(by: bag)
-        
+
         presenter.hasFailed?
             .map { ($0.localizedDescription, MessageType.error) }
             .drive(rx_showMessage)
             .disposed(by: bag)
+    }
+}
 
-        presenter.hasSucced?.asObservable().subscribe{ categories in
-            print("categories_loaded:")
-        }
-        .disposed(by: bag)
+extension MainScreenVC {
+    private func setupDetailLayer() {
+        detailLayer = DetailScreenVC.instance()
+        detailLayer.foodData = presenter.hasSucced
+
+        fpc = FloatingPanelController()
+        fpc.contentMode = .fitToBounds
+        fpc.set(contentViewController: detailLayer)
+        fpc.delegate = self
+        fpc.layout = self
+        fpc.addPanel(toParent: self)
     }
 }
 

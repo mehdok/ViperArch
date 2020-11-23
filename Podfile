@@ -47,6 +47,11 @@ def moya_mapper
 end
 
 ##
+def tab_pager
+  pod 'XLPagerTabStrip', '~> 9.0'
+end
+
+##
 def network_pods
   rx_swift
   object_mapper
@@ -95,7 +100,8 @@ target 'ViperArch' do
   rx_gesture
   king_fisher
   floating_panel
-
+  tab_pager
+  
   target 'ViperArchTests' do
     inherit! :search_paths
     # Pods for testing

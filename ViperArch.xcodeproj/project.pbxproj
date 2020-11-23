@@ -41,6 +41,8 @@
 		E5F8F553256BEA44004CB71E /* MessageLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F8F551256BEA44004CB71E /* MessageLayer.swift */; };
 		E5F8F554256BEA44004CB71E /* MessageLayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5F8F552256BEA44004CB71E /* MessageLayer.xib */; };
 		E5F8F558256BEA99004CB71E /* UIPanGestureRecognizerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F8F557256BEA99004CB71E /* UIPanGestureRecognizerExt.swift */; };
+		E5F8F577256BF98E004CB71E /* DetailTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F8F576256BF98E004CB71E /* DetailTabVC.swift */; };
+		E5F8F57D256BF9A4004CB71E /* DetailTabSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5F8F57C256BF9A4004CB71E /* DetailTabSB.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +121,8 @@
 		E5F8F551256BEA44004CB71E /* MessageLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageLayer.swift; sourceTree = "<group>"; };
 		E5F8F552256BEA44004CB71E /* MessageLayer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageLayer.xib; sourceTree = "<group>"; };
 		E5F8F557256BEA99004CB71E /* UIPanGestureRecognizerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPanGestureRecognizerExt.swift; sourceTree = "<group>"; };
+		E5F8F576256BF98E004CB71E /* DetailTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTabVC.swift; sourceTree = "<group>"; };
+		E5F8F57C256BF9A4004CB71E /* DetailTabSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailTabSB.storyboard; sourceTree = "<group>"; };
 		F9D286D1AAEC40C44EC73745 /* Pods-ViperArchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViperArchTests.release.xcconfig"; path = "Target Support Files/Pods-ViperArchTests/Pods-ViperArchTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -290,6 +294,7 @@
 		E5F04008256A408600B81198 /* DetailScreen */ = {
 			isa = PBXGroup;
 			children = (
+				E5F8F575256BF981004CB71E /* Tab */,
 				E5F04009256A40A000B81198 /* DetailScreenVC.swift */,
 				E5F0400D256A40AC00B81198 /* DetailScreenSB.storyboard */,
 			);
@@ -320,6 +325,15 @@
 				E5F8F552256BEA44004CB71E /* MessageLayer.xib */,
 			);
 			path = MessageLayer;
+			sourceTree = "<group>";
+		};
+		E5F8F575256BF981004CB71E /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				E5F8F576256BF98E004CB71E /* DetailTabVC.swift */,
+				E5F8F57C256BF9A4004CB71E /* DetailTabSB.storyboard */,
+			);
+			path = Tab;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -433,6 +447,7 @@
 			files = (
 				E5F0400E256A40AC00B81198 /* DetailScreenSB.storyboard in Resources */,
 				E5F8F554256BEA44004CB71E /* MessageLayer.xib in Resources */,
+				E5F8F57D256BF9A4004CB71E /* DetailTabSB.storyboard in Resources */,
 				E5844AB2256799F7005272A5 /* LaunchScreen.storyboard in Resources */,
 				E5844AAF256799F7005272A5 /* Assets.xcassets in Resources */,
 				E5844C292567F9DF005272A5 /* MainScreenSB.storyboard in Resources */,
@@ -566,6 +581,7 @@
 				E5844BFA2567F43D005272A5 /* UIApplicationService.swift in Sources */,
 				E5844C122567F86D005272A5 /* BaseInteractor.swift in Sources */,
 				E5F04031256A7C4200B81198 /* UIViewControllerExt.swift in Sources */,
+				E5F8F577256BF98E004CB71E /* DetailTabVC.swift in Sources */,
 				E5844C162567F889005272A5 /* BaseViewController.swift in Sources */,
 				E5844C212567F9CD005272A5 /* MainScreenRT.swift in Sources */,
 				E5844C0E2567F82A005272A5 /* BasePresenter.swift in Sources */,

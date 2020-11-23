@@ -33,6 +33,7 @@ PODS:
   - RxRelay (5.1.1):
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
+  - XLPagerTabStrip (9.0.0)
 
 DEPENDENCIES:
   - FloatingPanel
@@ -44,6 +45,7 @@ DEPENDENCIES:
   - RxDataSources (~> 4.0)
   - RxGesture (~> 3.0.2)
   - RxSwift (~> 5.1.1)
+  - XLPagerTabStrip (~> 9.0)
 
 SPEC REPOS:
   trunk:
@@ -59,6 +61,7 @@ SPEC REPOS:
     - RxGesture
     - RxRelay
     - RxSwift
+    - XLPagerTabStrip
 
 SPEC CHECKSUMS:
   Alamofire: 3b6a534a3df22db367e4dedeeca73d1ddfcf0e2f
@@ -73,7 +76,8 @@ SPEC CHECKSUMS:
   RxGesture: d6bd7447ca3a596c7a9702a6a2b6a2bb5d8bae54
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: 528212e2458196bd88c2099ec9832f6c10b95140
+PODFILE CHECKSUM: 8996ad895d0b5ddaa8a41500f45fbbdab3c6ba8f
 
 COCOAPODS: 1.10.0
