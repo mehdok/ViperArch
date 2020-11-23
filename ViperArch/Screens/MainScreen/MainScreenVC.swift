@@ -41,6 +41,11 @@ class MainScreenVC: BaseViewController<MainScreenIN, MainScreenPR> {
 
     override func bindViews() {
         presenter.isLoading?.drive(rx_showLoading).disposed(by: bag)
+        
+        presenter.hasFailed?
+            .map { ($0.localizedDescription, MessageType.error) }
+            .drive(rx_showMessage)
+            .disposed(by: bag)
 
         presenter.hasSucced?.asObservable().subscribe{ categories in
             print("categories_loaded:")

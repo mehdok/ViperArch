@@ -38,6 +38,9 @@
 		E5F0400A256A40A000B81198 /* DetailScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F04009256A40A000B81198 /* DetailScreenVC.swift */; };
 		E5F0400E256A40AC00B81198 /* DetailScreenSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5F0400D256A40AC00B81198 /* DetailScreenSB.storyboard */; };
 		E5F04031256A7C4200B81198 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F04030256A7C4200B81198 /* UIViewControllerExt.swift */; };
+		E5F8F553256BEA44004CB71E /* MessageLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F8F551256BEA44004CB71E /* MessageLayer.swift */; };
+		E5F8F554256BEA44004CB71E /* MessageLayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5F8F552256BEA44004CB71E /* MessageLayer.xib */; };
+		E5F8F558256BEA99004CB71E /* UIPanGestureRecognizerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F8F557256BEA99004CB71E /* UIPanGestureRecognizerExt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +116,9 @@
 		E5F04009256A40A000B81198 /* DetailScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreenVC.swift; sourceTree = "<group>"; };
 		E5F0400D256A40AC00B81198 /* DetailScreenSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailScreenSB.storyboard; sourceTree = "<group>"; };
 		E5F04030256A7C4200B81198 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
+		E5F8F551256BEA44004CB71E /* MessageLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageLayer.swift; sourceTree = "<group>"; };
+		E5F8F552256BEA44004CB71E /* MessageLayer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageLayer.xib; sourceTree = "<group>"; };
+		E5F8F557256BEA99004CB71E /* UIPanGestureRecognizerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPanGestureRecognizerExt.swift; sourceTree = "<group>"; };
 		F9D286D1AAEC40C44EC73745 /* Pods-ViperArchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViperArchTests.release.xcconfig"; path = "Target Support Files/Pods-ViperArchTests/Pods-ViperArchTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -196,6 +202,7 @@
 		E5844AA4256799F7005272A5 /* ViperArch */ = {
 			isa = PBXGroup;
 			children = (
+				E5F8F54F256BEA16004CB71E /* Views */,
 				E5F0402F256A7C3700B81198 /* Extensions */,
 				E5844C192567F98D005272A5 /* Screens */,
 				E5844BF22567F40A005272A5 /* Services */,
@@ -293,8 +300,26 @@
 			isa = PBXGroup;
 			children = (
 				E5F04030256A7C4200B81198 /* UIViewControllerExt.swift */,
+				E5F8F557256BEA99004CB71E /* UIPanGestureRecognizerExt.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E5F8F54F256BEA16004CB71E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E5F8F550256BEA23004CB71E /* MessageLayer */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E5F8F550256BEA23004CB71E /* MessageLayer */ = {
+			isa = PBXGroup;
+			children = (
+				E5F8F551256BEA44004CB71E /* MessageLayer.swift */,
+				E5F8F552256BEA44004CB71E /* MessageLayer.xib */,
+			);
+			path = MessageLayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -407,6 +432,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5F0400E256A40AC00B81198 /* DetailScreenSB.storyboard in Resources */,
+				E5F8F554256BEA44004CB71E /* MessageLayer.xib in Resources */,
 				E5844AB2256799F7005272A5 /* LaunchScreen.storyboard in Resources */,
 				E5844AAF256799F7005272A5 /* Assets.xcassets in Resources */,
 				E5844C292567F9DF005272A5 /* MainScreenSB.storyboard in Resources */,
@@ -543,10 +569,12 @@
 				E5844C162567F889005272A5 /* BaseViewController.swift in Sources */,
 				E5844C212567F9CD005272A5 /* MainScreenRT.swift in Sources */,
 				E5844C0E2567F82A005272A5 /* BasePresenter.swift in Sources */,
+				E5F8F553256BEA44004CB71E /* MessageLayer.swift in Sources */,
 				E5844C1B2567F9AE005272A5 /* MainScreenPR.swift in Sources */,
 				E5844AA6256799F7005272A5 /* AppDelegate.swift in Sources */,
 				E5844C2D2567FB0B005272A5 /* MainScreenIN.swift in Sources */,
 				E5844C252567F9D6005272A5 /* MainScreenVC.swift in Sources */,
+				E5F8F558256BEA99004CB71E /* UIPanGestureRecognizerExt.swift in Sources */,
 				E5844BF42567F415005272A5 /* DependenciesApplicationService.swift in Sources */,
 				E5844BE92567F3BC005272A5 /* ApplicationService.swift in Sources */,
 				E5F0400A256A40A000B81198 /* DetailScreenVC.swift in Sources */,

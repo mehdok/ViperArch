@@ -17,7 +17,7 @@ enum FoodCategoryResult {
 
 class MainScreenPR: BasePresenter<MainScreenIN> {
     var isLoading: Driver<Bool>?
-    var hasFailed: Driver<Error?>?
+    var hasFailed: Driver<Error>?
     var hasSucced: Driver<[FoodCategory]>?
 
     func bindViewDidLoad(_ vdl: Driver<Void>) {
@@ -54,6 +54,7 @@ class MainScreenPR: BasePresenter<MainScreenIN> {
                 }
             }
             .filter { $0 != nil }
+            .map { $0! }
 
         hasSucced = state
             .map { event -> [FoodCategory]? in
