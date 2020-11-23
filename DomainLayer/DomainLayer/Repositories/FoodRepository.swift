@@ -8,5 +8,5 @@
 import RxSwift
 
 public protocol FoodRepository {
-    func getFoodList() -> Observable<[FoodCategory]>
+    func getFoodList() -> Single<[FoodCategory]>
 }

@@ -41,6 +41,19 @@ def floating_panel
   pod 'FloatingPanel'
 end
 
+##
+def moya_mapper
+  pod 'Moya-ObjectMapper/RxSwift'
+end
+
+##
+def network_pods
+  rx_swift
+  object_mapper
+  moya
+  moya_mapper
+end
+
 ####
 target 'DomainLayer' do
     use_frameworks!
@@ -62,9 +75,7 @@ target 'NetworkLayer' do
     workspace 'ViperArch'
     project 'NetworkLayer/NetworkLayer.xcodeproj'
     
-    rx_swift
-    object_mapper
-    moya
+    network_pods
     
     target 'NetworkLayerTests' do
       inherit! :search_paths
@@ -78,13 +89,11 @@ target 'ViperArch' do
   use_frameworks!
 
   # Pods for MarvelApiTest
-  rx_swift
+  network_pods
   rx_cocoa
   rx_data_source
   rx_gesture
   king_fisher
-  object_mapper
-  moya
   floating_panel
 
   target 'ViperArchTests' do

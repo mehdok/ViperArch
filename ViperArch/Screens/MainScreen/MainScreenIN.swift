@@ -15,7 +15,7 @@ class MainScreenIN: BaseInteractor {
     
     let foodRepository: FoodRepository
     
-    func getFoodList() -> Observable<[FoodCategory]> {
+    func getFoodList() -> Single<[FoodCategory]> {
         foodRepository.getFoodList()
     }
 }

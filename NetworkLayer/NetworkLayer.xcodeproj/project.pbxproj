@@ -14,7 +14,7 @@
 		E5844B2525679D22005272A5 /* NetworkLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = E5844B1725679D22005272A5 /* NetworkLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5844B392567A103005272A5 /* DomainLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5844B382567A103005272A5 /* DomainLayer.framework */; };
 		E5844B3A2567A103005272A5 /* DomainLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E5844B382567A103005272A5 /* DomainLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E5844B552567A97C005272A5 /* food_smple.json in Resources */ = {isa = PBXBuildFile; fileRef = E5844B542567A97C005272A5 /* food_smple.json */; };
+		E5844B552567A97C005272A5 /* food_sample.json in Resources */ = {isa = PBXBuildFile; fileRef = E5844B542567A97C005272A5 /* food_sample.json */; };
 		E5844B7B2567ABE0005272A5 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5844B7A2567ABE0005272A5 /* BaseResponse.swift */; };
 		E5844BA62567AE11005272A5 /* OMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5844BA52567AE11005272A5 /* OMenuItem.swift */; };
 		E5844BA92567B36B005272A5 /* OFoodCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5844BA82567B36B005272A5 /* OFoodCategory.swift */; };
@@ -60,7 +60,7 @@
 		E5844B2225679D22005272A5 /* NetworkLayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayerTests.swift; sourceTree = "<group>"; };
 		E5844B2425679D22005272A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5844B382567A103005272A5 /* DomainLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DomainLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E5844B542567A97C005272A5 /* food_smple.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = food_smple.json; sourceTree = "<group>"; };
+		E5844B542567A97C005272A5 /* food_sample.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = food_sample.json; sourceTree = "<group>"; };
 		E5844B7A2567ABE0005272A5 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 		E5844BA52567AE11005272A5 /* OMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMenuItem.swift; sourceTree = "<group>"; };
 		E5844BA82567B36B005272A5 /* OFoodCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OFoodCategory.swift; sourceTree = "<group>"; };
@@ -133,7 +133,7 @@
 				E5844B782567ABC1005272A5 /* Models */,
 				E5844B1725679D22005272A5 /* NetworkLayer.h */,
 				E5844B1825679D22005272A5 /* Info.plist */,
-				E5844B542567A97C005272A5 /* food_smple.json */,
+				E5844B542567A97C005272A5 /* food_sample.json */,
 			);
 			path = NetworkLayer;
 			sourceTree = "<group>";
@@ -286,7 +286,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5844B552567A97C005272A5 /* food_smple.json in Resources */,
+				E5844B552567A97C005272A5 /* food_sample.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

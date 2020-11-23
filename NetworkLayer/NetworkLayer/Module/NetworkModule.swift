@@ -22,6 +22,6 @@ public struct NetworkModule: NetworkModuleType {
 
 extension NetworkModule {
     private func component() -> MoyaProvider<FoodService> {
-        MoyaProvider<FoodService>()
+        MoyaProvider<FoodService>(stubClosure: MoyaProvider.immediatelyStub)
     }
 }

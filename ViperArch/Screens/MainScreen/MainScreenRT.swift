@@ -12,7 +12,7 @@ import RxSwift
 class MainScreenRT: BaseRouter<Void> {
     let navigationController: UINavigationController
 
-    @Inject private var uiModule: UIModuleType
+    @Inject private var networkModule: NetworkModuleType
 
     public init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -20,7 +20,11 @@ class MainScreenRT: BaseRouter<Void> {
 
     override func start() -> Observable<Void> {
         let viewController = MainScreenVC.instance()
-        viewController.presenter = uiModule.component()
+        viewController.presenter = MainScreenPR(interactor:
+            MainScreenIN(foodRepository:
+                networkModule.component()))
+        viewController.presenter
+            .bindViewDidLoad(viewController.rx.viewDidLoad.asDriver())
         navigationController.viewControllers = [viewController]
 
         return Observable.never()

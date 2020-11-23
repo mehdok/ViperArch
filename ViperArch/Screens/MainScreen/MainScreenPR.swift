@@ -29,7 +29,7 @@ class MainScreenPR: BasePresenter<MainScreenIN> {
                         .success(foodCategory)
                     }
                     .catchError {
-                        Observable.just(FoodCategoryResult.error($0))
+                        Single.just(FoodCategoryResult.error($0))
                     }
                     .asDriver { error -> Driver<FoodCategoryResult> in
                         Driver.just(.error(error))

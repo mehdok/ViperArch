@@ -24,7 +24,6 @@
 		E5844BEF2567F3CF005272A5 /* PluggableApplicationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5844BEE2567F3CF005272A5 /* PluggableApplicationDelegate.swift */; };
 		E5844BF42567F415005272A5 /* DependenciesApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5844BF32567F415005272A5 /* DependenciesApplicationService.swift */; };
 		E5844BFA2567F43D005272A5 /* UIApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5844BF92567F43D005272A5 /* UIApplicationService.swift */; };
-		E5844BFF2567F4B0005272A5 /* UIModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5844BFE2567F4B0005272A5 /* UIModule.swift */; };
 		E5844C0A2567F669005272A5 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5844C092567F669005272A5 /* BaseRouter.swift */; };
 		E5844C0E2567F82A005272A5 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5844C0D2567F82A005272A5 /* BasePresenter.swift */; };
 		E5844C122567F86D005272A5 /* BaseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5844C112567F86D005272A5 /* BaseInteractor.swift */; };
@@ -38,6 +37,7 @@
 		E5844C372567FDEE005272A5 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5844C362567FDEE005272A5 /* BaseNavigationController.swift */; };
 		E5F0400A256A40A000B81198 /* DetailScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F04009256A40A000B81198 /* DetailScreenVC.swift */; };
 		E5F0400E256A40AC00B81198 /* DetailScreenSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5F0400D256A40AC00B81198 /* DetailScreenSB.storyboard */; };
+		E5F04031256A7C4200B81198 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F04030256A7C4200B81198 /* UIViewControllerExt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,7 +99,6 @@
 		E5844BEE2567F3CF005272A5 /* PluggableApplicationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PluggableApplicationDelegate.swift; sourceTree = "<group>"; };
 		E5844BF32567F415005272A5 /* DependenciesApplicationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependenciesApplicationService.swift; sourceTree = "<group>"; };
 		E5844BF92567F43D005272A5 /* UIApplicationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationService.swift; sourceTree = "<group>"; };
-		E5844BFE2567F4B0005272A5 /* UIModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIModule.swift; sourceTree = "<group>"; };
 		E5844C092567F669005272A5 /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		E5844C0D2567F82A005272A5 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 		E5844C112567F86D005272A5 /* BaseInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInteractor.swift; sourceTree = "<group>"; };
@@ -113,6 +112,7 @@
 		E5844C362567FDEE005272A5 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		E5F04009256A40A000B81198 /* DetailScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreenVC.swift; sourceTree = "<group>"; };
 		E5F0400D256A40AC00B81198 /* DetailScreenSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailScreenSB.storyboard; sourceTree = "<group>"; };
+		E5F04030256A7C4200B81198 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 		F9D286D1AAEC40C44EC73745 /* Pods-ViperArchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViperArchTests.release.xcconfig"; path = "Target Support Files/Pods-ViperArchTests/Pods-ViperArchTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -196,8 +196,8 @@
 		E5844AA4256799F7005272A5 /* ViperArch */ = {
 			isa = PBXGroup;
 			children = (
+				E5F0402F256A7C3700B81198 /* Extensions */,
 				E5844C192567F98D005272A5 /* Screens */,
-				E5844BFD2567F49F005272A5 /* Module */,
 				E5844BF22567F40A005272A5 /* Services */,
 				E5844BE72567F3AB005272A5 /* Application */,
 				E5844AD825679C63005272A5 /* Base */,
@@ -259,14 +259,6 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		E5844BFD2567F49F005272A5 /* Module */ = {
-			isa = PBXGroup;
-			children = (
-				E5844BFE2567F4B0005272A5 /* UIModule.swift */,
-			);
-			path = Module;
-			sourceTree = "<group>";
-		};
 		E5844C192567F98D005272A5 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -295,6 +287,14 @@
 				E5F0400D256A40AC00B81198 /* DetailScreenSB.storyboard */,
 			);
 			path = DetailScreen;
+			sourceTree = "<group>";
+		};
+		E5F0402F256A7C3700B81198 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E5F04030256A7C4200B81198 /* UIViewControllerExt.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -539,6 +539,7 @@
 			files = (
 				E5844BFA2567F43D005272A5 /* UIApplicationService.swift in Sources */,
 				E5844C122567F86D005272A5 /* BaseInteractor.swift in Sources */,
+				E5F04031256A7C4200B81198 /* UIViewControllerExt.swift in Sources */,
 				E5844C162567F889005272A5 /* BaseViewController.swift in Sources */,
 				E5844C212567F9CD005272A5 /* MainScreenRT.swift in Sources */,
 				E5844C0E2567F82A005272A5 /* BasePresenter.swift in Sources */,
@@ -551,7 +552,6 @@
 				E5F0400A256A40A000B81198 /* DetailScreenVC.swift in Sources */,
 				E5844ADA25679C70005272A5 /* StoryboardInitializable.swift in Sources */,
 				E5844C312567FD73005272A5 /* AppRouter.swift in Sources */,
-				E5844BFF2567F4B0005272A5 /* UIModule.swift in Sources */,
 				E5844C372567FDEE005272A5 /* BaseNavigationController.swift in Sources */,
 				E5844BEF2567F3CF005272A5 /* PluggableApplicationDelegate.swift in Sources */,
 				E5844C0A2567F669005272A5 /* BaseRouter.swift in Sources */,

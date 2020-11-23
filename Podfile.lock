@@ -5,6 +5,15 @@ PODS:
   - Kingfisher (5.15.7):
     - Kingfisher/Core (= 5.15.7)
   - Kingfisher/Core (5.15.7)
+  - Moya (14.0.0):
+    - Moya/Core (= 14.0.0)
+  - Moya-ObjectMapper/Core (2.9):
+    - Moya (~> 14.0.0-beta.6)
+    - ObjectMapper
+  - Moya-ObjectMapper/RxSwift (2.9):
+    - Moya-ObjectMapper/Core
+    - Moya/RxSwift
+    - RxSwift
   - Moya/Core (14.0.0):
     - Alamofire (~> 5.0)
   - Moya/RxSwift (14.0.0):
@@ -28,6 +37,7 @@ PODS:
 DEPENDENCIES:
   - FloatingPanel
   - Kingfisher (~> 5.15.7)
+  - Moya-ObjectMapper/RxSwift
   - Moya/RxSwift (~> 14.0)
   - ObjectMapper (~> 4.2.0)
   - RxCocoa (~> 5.1.1)
@@ -42,6 +52,7 @@ SPEC REPOS:
     - FloatingPanel
     - Kingfisher
     - Moya
+    - Moya-ObjectMapper
     - ObjectMapper
     - RxCocoa
     - RxDataSources
@@ -55,6 +66,7 @@ SPEC CHECKSUMS:
   FloatingPanel: 579a5ac0154f923a9d7302c4f13dbc0268511c92
   Kingfisher: 6e1a13523fcb1c86924ce53affe4ac957e544d59
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  Moya-ObjectMapper: 967a99d9ea3aa9c93ddbe112aeca3667f53bfe93
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
@@ -62,6 +74,6 @@ SPEC CHECKSUMS:
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
 
-PODFILE CHECKSUM: 48409fecbfaea71c592db26eb91aa17035113bff
+PODFILE CHECKSUM: 528212e2458196bd88c2099ec9832f6c10b95140
 
 COCOAPODS: 1.10.0

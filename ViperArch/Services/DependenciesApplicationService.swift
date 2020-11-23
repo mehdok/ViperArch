@@ -11,7 +11,6 @@ import NetworkLayer
 class DependenciesApplicationService: ApplicationService {
     private let dependencies = Dependencies {
         Module { NetworkModule() as NetworkModuleType }
-        Module { UIModule() as UIModuleType }
     }
 
     func initialize() {
