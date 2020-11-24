@@ -15,6 +15,7 @@ class MainScreenVC: BaseViewController<MainScreenIN, MainScreenPR> {
     var detailLayer: DetailScreenVC!
 
     @IBOutlet var loadIndicator: UIActivityIndicatorView!
+    @IBOutlet var promotionLayer: UIView!
 
     static func instance() -> MainScreenVC {
         MainScreenVC.initFromStoryboard(name: "MainScreenSB")
@@ -24,6 +25,7 @@ class MainScreenVC: BaseViewController<MainScreenIN, MainScreenPR> {
         super.viewDidLoad()
 
         setupDetailLayer()
+        addPromotionLayer()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -56,6 +58,16 @@ extension MainScreenVC {
         fpc.delegate = self
         fpc.layout = self
         fpc.addPanel(toParent: self)
+    }
+
+    func addPromotionLayer() {
+        let promotionVC = PromotionScreenVC.instance()
+        addChild(promotionVC)
+        promotionVC.view.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        promotionVC.view.frame = promotionLayer.bounds
+
+        promotionLayer.addSubview(promotionVC.view)
+        promotionVC.didMove(toParent: self)
     }
 }
 

@@ -17,20 +17,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="97L-t6-OG1">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="627"/>
+                            </containerView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Itk-Gy-VaZ">
                                 <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
                                 <color key="color" systemColor="systemBlueColor"/>
                             </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tTg-8D-AYI"/>
-                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="97L-t6-OG1" firstAttribute="trailing" secondItem="tTg-8D-AYI" secondAttribute="trailing" id="004-rt-tZ7"/>
+                            <constraint firstItem="97L-t6-OG1" firstAttribute="top" secondItem="YrS-Ll-2iM" secondAttribute="top" id="Ade-uq-Avv"/>
                             <constraint firstItem="Itk-Gy-VaZ" firstAttribute="centerY" secondItem="YrS-Ll-2iM" secondAttribute="centerY" id="ORI-MH-UlN"/>
+                            <constraint firstItem="97L-t6-OG1" firstAttribute="height" secondItem="YrS-Ll-2iM" secondAttribute="height" multiplier="0.7" id="bcT-qK-rtL"/>
                             <constraint firstItem="Itk-Gy-VaZ" firstAttribute="centerX" secondItem="YrS-Ll-2iM" secondAttribute="centerX" id="f06-ud-IS1"/>
+                            <constraint firstItem="97L-t6-OG1" firstAttribute="leading" secondItem="tTg-8D-AYI" secondAttribute="leading" id="f9K-D2-ifA"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="loadIndicator" destination="Itk-Gy-VaZ" id="fY0-0p-qaA"/>
+                        <outlet property="promotionLayer" destination="97L-t6-OG1" id="aXC-t9-S30"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EzK-4a-3oe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -39,11 +47,11 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

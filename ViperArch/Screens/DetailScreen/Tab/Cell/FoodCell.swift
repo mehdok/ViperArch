@@ -5,14 +5,14 @@
 //  Created by Mehdok on 11/24/20.
 //
 
-import UIKit
 import DomainLayer
 import Kingfisher
+import UIKit
 
 class FoodCell: UITableViewCell {
-    @IBOutlet weak var foodImage: UIImageView!
-    @IBOutlet weak var foodTitle: UILabel!
-    @IBOutlet weak var foodDescription: UILabel!
+    @IBOutlet var foodImage: UIImageView!
+    @IBOutlet var foodTitle: UILabel!
+    @IBOutlet var foodDescription: UILabel!
     
     var food: MenuItem? {
         didSet {
@@ -28,5 +28,4 @@ class FoodCell: UITableViewCell {
             foodImage.kf.setImage(with: url)
         }
     }
-    
 }

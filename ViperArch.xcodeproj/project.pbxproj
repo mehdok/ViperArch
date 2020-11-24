@@ -38,6 +38,8 @@
 		E5EB0AA7256D3B3100380E2D /* FoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EB0AA5256D3B3100380E2D /* FoodCell.swift */; };
 		E5EB0AA8256D3B3100380E2D /* FoodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5EB0AA6256D3B3100380E2D /* FoodCell.xib */; };
 		E5EB0AAC256D3CCE00380E2D /* FoodSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EB0AAB256D3CCE00380E2D /* FoodSection.swift */; };
+		E5EB0AB1256D4EF100380E2D /* PromotionScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EB0AB0256D4EF100380E2D /* PromotionScreenVC.swift */; };
+		E5EB0AB7256D4EFB00380E2D /* PromotionScreenSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5EB0AB6256D4EFB00380E2D /* PromotionScreenSB.storyboard */; };
 		E5F0400A256A40A000B81198 /* DetailScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F04009256A40A000B81198 /* DetailScreenVC.swift */; };
 		E5F0400E256A40AC00B81198 /* DetailScreenSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5F0400D256A40AC00B81198 /* DetailScreenSB.storyboard */; };
 		E5F04031256A7C4200B81198 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F04030256A7C4200B81198 /* UIViewControllerExt.swift */; };
@@ -121,6 +123,8 @@
 		E5EB0AA5256D3B3100380E2D /* FoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
 		E5EB0AA6256D3B3100380E2D /* FoodCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodCell.xib; sourceTree = "<group>"; };
 		E5EB0AAB256D3CCE00380E2D /* FoodSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSection.swift; sourceTree = "<group>"; };
+		E5EB0AB0256D4EF100380E2D /* PromotionScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionScreenVC.swift; sourceTree = "<group>"; };
+		E5EB0AB6256D4EFB00380E2D /* PromotionScreenSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PromotionScreenSB.storyboard; sourceTree = "<group>"; };
 		E5F04009256A40A000B81198 /* DetailScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreenVC.swift; sourceTree = "<group>"; };
 		E5F0400D256A40AC00B81198 /* DetailScreenSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailScreenSB.storyboard; sourceTree = "<group>"; };
 		E5F04030256A7C4200B81198 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
@@ -279,6 +283,7 @@
 		E5844C192567F98D005272A5 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				E5EB0AAF256D4ED700380E2D /* PromotionScreen */,
 				E5F04008256A408600B81198 /* DetailScreen */,
 				E5F04006256A406100B81198 /* MainScreen */,
 			);
@@ -293,6 +298,15 @@
 				E5EB0AAB256D3CCE00380E2D /* FoodSection.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		E5EB0AAF256D4ED700380E2D /* PromotionScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E5EB0AB0256D4EF100380E2D /* PromotionScreenVC.swift */,
+				E5EB0AB6256D4EFB00380E2D /* PromotionScreenSB.storyboard */,
+			);
+			path = PromotionScreen;
 			sourceTree = "<group>";
 		};
 		E5F04006256A406100B81198 /* MainScreen */ = {
@@ -469,6 +483,7 @@
 				E5844AAF256799F7005272A5 /* Assets.xcassets in Resources */,
 				E5EB0AA8256D3B3100380E2D /* FoodCell.xib in Resources */,
 				E5844C292567F9DF005272A5 /* MainScreenSB.storyboard in Resources */,
+				E5EB0AB7256D4EFB00380E2D /* PromotionScreenSB.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -598,6 +613,7 @@
 			files = (
 				E5844BFA2567F43D005272A5 /* UIApplicationService.swift in Sources */,
 				E5EB0AA7256D3B3100380E2D /* FoodCell.swift in Sources */,
+				E5EB0AB1256D4EF100380E2D /* PromotionScreenVC.swift in Sources */,
 				E5844C122567F86D005272A5 /* BaseInteractor.swift in Sources */,
 				E5F04031256A7C4200B81198 /* UIViewControllerExt.swift in Sources */,
 				E5F8F577256BF98E004CB71E /* DetailTabVC.swift in Sources */,
