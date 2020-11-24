@@ -40,7 +40,7 @@ class DetailTabVC: UIViewController, StoryboardInitializable {
         tableView.register(UINib(nibName: kCellId, bundle: nil),
                            forCellReuseIdentifier: kCellId)
         
-        tableView.rowHeight = 120
+        tableView.rowHeight = 310
         
         let dataSource = RxTableViewSectionedReloadDataSource<SectionOfFood>(
             configureCell: { [unowned self] _, tableView, indexPath, item in
