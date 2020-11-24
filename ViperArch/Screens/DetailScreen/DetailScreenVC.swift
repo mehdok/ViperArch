@@ -14,11 +14,10 @@ import XLPagerTabStrip
 class DetailScreenVC: ButtonBarPagerTabStripViewController, StoryboardInitializable {
     public var bag = DisposeBag()
 
-    var foodData: Driver<[FoodCategory]>? {
-        didSet {
-            bindData()
-        }
-    }
+    let foodPublisher = BehaviorSubject<[FoodCategory]>(value: [])
+    private let appeteasersPublisher = BehaviorSubject<FoodCategory?>(value: nil)
+    private let saladPublisher = BehaviorSubject<FoodCategory?>(value: nil)
+    private let burgersPublisher = BehaviorSubject<FoodCategory?>(value: nil)
 
     static func instance() -> DetailScreenVC {
         return initFromStoryboard(name: "DetailScreenSB")
@@ -26,19 +25,38 @@ class DetailScreenVC: ButtonBarPagerTabStripViewController, StoryboardInitializa
 
     override func viewDidLoad() {
         setupTabStrip()
+        bindData()
+
         super.viewDidLoad()
     }
 
     private func bindData() {
-        foodData?.asObservable().subscribe { _ in
-            print("data received")
-        }.disposed(by: bag)
+        foodPublisher
+            .map { $0.first(where: { $0.name == "Appeteasers" }) }
+            .filter { $0 != nil }
+            .map { $0! }
+            .bind(to: appeteasersPublisher)
+            .disposed(by: bag)
+
+        foodPublisher
+            .map { $0.first(where: { $0.name == "Salads" }) }
+            .filter { $0 != nil }
+            .map { $0! }
+            .bind(to: saladPublisher)
+            .disposed(by: bag)
+
+        foodPublisher
+            .map { $0.first(where: { $0.name == "Burgers" }) }
+            .filter { $0 != nil }
+            .map { $0! }
+            .bind(to: burgersPublisher)
+            .disposed(by: bag)
     }
 
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
-        [DetailTabVC.instance(tabTitle: "Appeteasers"),
-         DetailTabVC.instance(tabTitle: "Salads"),
-         DetailTabVC.instance(tabTitle: "Burgers")]
+        [appeteasersVC,
+         saladVC,
+         burgersVC]
     }
 
     deinit {
@@ -54,5 +72,37 @@ extension DetailScreenVC {
         settings.style.buttonBarItemTitleColor = .black
         settings.style.buttonBarItemFont = .systemFont(ofSize: 20, weight: .bold)
         settings.style.selectedBarHeight = 2
+    }
+}
+
+extension DetailScreenVC {
+    private var appeteasersVC: DetailTabVC {
+        let vc = DetailTabVC.instance(tabTitle: "Appeteasers")
+        appeteasersPublisher
+            .filter { $0 != nil }
+            .map { $0! }
+            .bind(to: vc.categoryPublisher)
+            .disposed(by: bag)
+        return vc
+    }
+
+    private var saladVC: DetailTabVC {
+        let vc = DetailTabVC.instance(tabTitle: "Salads")
+        saladPublisher
+            .filter { $0 != nil }
+            .map { $0! }
+            .bind(to: vc.categoryPublisher)
+            .disposed(by: bag)
+        return vc
+    }
+
+    private var burgersVC: DetailTabVC {
+        let vc = DetailTabVC.instance(tabTitle: "Burgers")
+        burgersPublisher
+            .filter { $0 != nil }
+            .map { $0! }
+            .bind(to: vc.categoryPublisher)
+            .disposed(by: bag)
+        return vc
     }
 }

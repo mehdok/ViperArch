@@ -45,7 +45,10 @@ class MainScreenVC: BaseViewController<MainScreenIN, MainScreenPR> {
 extension MainScreenVC {
     private func setupDetailLayer() {
         detailLayer = DetailScreenVC.instance()
-        detailLayer.foodData = presenter.hasSucced
+        presenter.hasSucced?
+            .asObservable()
+            .bind(to: detailLayer.foodPublisher)
+            .disposed(by: bag)
 
         fpc = FloatingPanelController()
         fpc.contentMode = .fitToBounds
